@@ -1,0 +1,22 @@
+@mixin banner() {
+  position:relative;
+  .banner-image {
+    position: absolute;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height:100vh;
+    width:100%;
+  }
+  .banner-content {
+    position: relative;
+    h1 {
+      font-size:7em;
+      padding-top:0.5em;
+      margin-bottom:0.5em;
+    }
+  }
+  .banner-content.centre {
+    text-align: center;
+  }
+}

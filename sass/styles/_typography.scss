@@ -1,0 +1,120 @@
+@import '../global_variables';
+@import '../utils/utils';
+
+
+/* Responsive */
+body {
+  @include media($bp-small) {
+    font-size:100%
+  }
+  @include media($bp-medium) {
+    font-size: 150%;
+  }
+  @include media($bp-large) {
+    font-size: 200%;
+  }
+  @include media($bp-x-large) {
+    font-size: 300%;
+  }
+}
+
+/* Headings */
+
+body {
+  font-family: $font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-headings;
+}
+
+h1 {
+  @include type-setting('xxx-large');
+  text-transform: uppercase;
+}
+
+h2 {
+  @include type-setting('xx-large');
+  text-transform: uppercase;
+}
+
+h3 {
+  @include type-setting('large');
+}
+
+h4, h5, h6 {
+  @include type-setting('normal');
+  margin-bottom: 0em; // Override the margin bottom that's applied to other body text elements
+}
+
+/* Body */
+
+p, ul, ol {
+  @include type-setting('normal');
+}
+
+p {
+  font-weight: 300;
+}
+
+p.small {
+  @include type-setting('small');
+}
+
+.label {
+  text-transform: uppercase;
+  color:get-color('green',3);
+  font-weight: bold;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* List Styles */
+
+ul.breadcrumb {
+  font-family: $font-headings;
+  font-weight: 300;
+  li {
+
+  }
+  li:after {
+    content:'/';
+    color:get-color('azure', 3);
+    padding: 0 0.3em;
+  }
+  a {
+    color:get-color('grey', 2)
+  }
+  li:last-child:after {
+    content: none;
+  }
+}
+
+ul.inline {
+  li {
+    display:inline-block;
+  }
+}
+
+ul.menu-items {
+  li:before {
+    font-family: 'FontAwesome';
+    content: '\f105';
+    margin:0 0.5em 0 -1em;
+    color: get-color('orange',0);
+  }
+  li:hover:before {
+    color: get-color('orange',3);
+  }
+}
+
+strong {
+  font-weight:bold;
+}

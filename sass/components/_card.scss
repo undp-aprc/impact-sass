@@ -1,0 +1,11 @@
+@mixin card() {
+  background-color:white;
+  border-radius: 3px;
+  min-height: 70vh;
+  padding:0.5em;
+  max-width:100%;
+  box-sizing: border-box;
+  &.swiper-slide-active {
+    margin-right: 0 !important;
+  }
+}

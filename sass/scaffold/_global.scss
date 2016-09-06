@@ -1,0 +1,10 @@
+body {
+  background-color: get-color('grey',0);
+  margin: 0;
+}
+
+.container {
+  padding:$padding-default;
+  background-color: transparent;
+  box-sizing: border-box;
+}

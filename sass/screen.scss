@@ -1,0 +1,27 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "libraries/bourbon/bourbon";
+@import "libraries/neat/neat";
+@import "libraries/base/base";
+@import "libraries/font-awesome/scss/font-awesome";
+
+@import "global_variables";
+@import "utils/utils";
+
+@import "styles/colors";
+@import "styles/typography";
+
+@import "scaffold/global";
+@import "scaffold/landing-page";
+
+@import "./components/components";
+
+
+
+
+
+
