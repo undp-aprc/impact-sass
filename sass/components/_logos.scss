@@ -1,0 +1,26 @@
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  .container {
+    padding:0;
+    ul {
+      display:flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      li {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  img {
+
+  }
+
+  &.inactive {
+    width:300px;
+  }
+}
+

@@ -1,0 +1,18 @@
+.chart-legend {
+  list-style: square;
+  font-weight: bold;
+  width:50%;
+  margin: auto;
+  @include media($bp-small) {
+    width:100%;
+  }
+  li:nth-child(1) {
+    color: #0055aa;
+  }
+  li:nth-child(2) {
+    color: #009ed4;
+  }
+  li:nth-child(3) {
+    color: #e84e0f;
+  }
+}

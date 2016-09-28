@@ -1,0 +1,73 @@
+$hover-tile-bg-colors:
+        get-color('blue',0),
+        get-color('green',0),
+        get-color('orange',0),
+        #dfceda,
+        #fef8d0,
+        get-color('azure',0);
+
+.hover-tile-outer {
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: 40em !default;
+  $hover-tile-height: 10em;
+  $base-spacing: 1.5em;
+
+  background-position: top;
+  background-size: cover;
+  border: 1px solid $base-border-color;
+  cursor: pointer;
+  height: $hover-tile-height;
+  width:100%;
+
+  h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    transform: translate(0, -100%);
+  }
+
+  .hover-tile {
+    background: inherit;
+    color: white;
+    height: inherit;
+    overflow: hidden;
+    padding: $base-spacing;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hover-tile-hidden {
+    font-size: 60%;
+    background: transparentize(#000, 0.5);
+
+    p {
+      color: transparentize(#fff, 0.3);
+      color:white;
+    }
+
+    h4 {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+
+/* This only works for tiles contained within a grid */
+/* @todo enable array of colors for tiles inside different width grid columns and also if not in grid columns at all */
+.grid .grid-4-cols {
+  @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
+    &:nth-child(#{$i}) {
+      .hover-tile-outer {
+        $color-from-list: nth($hover-tile-bg-colors, $i);
+        background-color: $color-from-list;
+      }
+    }
+  }
+}
+

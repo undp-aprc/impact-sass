@@ -41,3 +41,18 @@ a:visited {
   background-color: get-color('grey',0);
 }
 
+.block.dark {
+  background-color: get-color('grey',1);
+}
+
+.block.light {
+  background-color: get-color('grey',0);
+}
+
+.block.inverted {
+  background-color: get-color('grey', 5);
+  p {
+    color:white;
+  }
+}
+

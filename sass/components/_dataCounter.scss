@@ -1,0 +1,18 @@
+.block-data-counter {
+  background-color: get-color('blue',0);
+
+  @include clearfix;
+  text-align: center;
+  .value {
+    font-size: modular-scale(2);
+    font-family: $font-headings;
+    color: get-color('orange',2);
+  }
+  .label {
+    font-size: modular-scale(1);
+    color: get-color('grey',0);
+  }
+  p {
+    margin-bottom: 0;
+  }
+}

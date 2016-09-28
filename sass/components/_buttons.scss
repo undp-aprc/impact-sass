@@ -1,0 +1,12 @@
+a.button {
+  display: inline-block;
+  color:white;
+  border: 1px solid white;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  border-radius: $border-radius-sm;
+  &.hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

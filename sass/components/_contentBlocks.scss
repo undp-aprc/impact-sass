@@ -1,0 +1,32 @@
+.block {
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
+  h5, h6 {
+    @include media ($bp-small) {
+      text-align: left;
+    }
+  }
+
+  h3 {
+    margin-bottom: 1em;
+  }
+
+  .highlight {
+    text-align: center;
+    color: get-color('blue',3);
+  }
+  @include clearfix;
+
+  &.padding {
+    padding: 1em;
+  }
+
+  // If block has positioning set and if it should always be displayed behind other blocks (Eg. in the case of fixed content, that should slide underneath)
+  z-index:0;
+  &.behind {
+    z-index: -1000;
+  }
+}

@@ -1,0 +1,59 @@
+.grid {
+  @include outer-container;
+  &.line-wrap {
+    .grid-2-cols, .grid-3-cols, .grid-4-cols, .grid-8-cols {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.grid-2-cols {
+  @include span-columns(12);
+  margin-bottom: 1em;
+  &.small {
+    @include media($bp-small) {
+      @include span-columns(2);
+      margin-column: 0;
+    }
+  }
+}
+
+.grid-3-cols {
+  @include span-columns(12);
+  margin-bottom: 1em;
+  &.small {
+    @include media($bp-small) {
+      @include span-columns(3);
+      @include omega(4n);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.grid-4-cols {
+  @include span-columns(12);
+  margin-bottom: 1em;
+  &.small {
+    @include media($bp-small) {
+      @include span-columns(4);
+      @include omega(3n);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.grid-8-cols {
+  @include span-columns(12);
+  margin-bottom: 1em;
+  &.small {
+    @include media($bp-small) {
+      @include span-columns(8);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.grid-12-cols {
+  @include span-columns(12);
+  margin-bottom: 1em;
+}

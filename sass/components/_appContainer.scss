@@ -1,0 +1,57 @@
+.app-container {
+  position:relative;
+  z-index:2;
+  h4 {
+    position:absolute;
+    top:0;
+    z-index:100;
+    width:100%;
+    text-align: left;
+    padding:1em 1em;
+    z-index:1;
+    color:white;
+  }
+  .signature-programme.container {
+    display:none;
+    &.active {
+      display:block;
+    }
+  }
+  .container.graph {
+    width:30%;
+    height:10em;
+    position:absolute;
+    bottom:0;
+    z-index: 10;
+    background-color: rgba(100,100,100,0.5);
+    margin: 1em;
+    padding:0.5em;
+    border-radius: 5px;
+    border:1px solid rgba(100,100,100,1);
+    canvas {
+      max-height:100%;
+      max-width:100%;
+    }
+    h5 {
+      color: white;
+    }
+  }
+  #container-sp1  h4 {
+    background-color: rgba(250, 128, 26, 0.4);
+  }
+  #container-sp2  h4 {
+    background-color: rgba(188, 33, 55, 0.4);
+  }
+  #container-sp3  h4 {
+    background-color: rgba(134, 193, 230, 0.4);
+  }
+  #container-sp4  h4 {
+    background-color: rgba(27, 126, 18, 0.4);
+  }
+  #container-sp5  h4 {
+    background-color: rgba(16, 133, 252, 0.4);
+  }
+  #container-sp6  h4 {
+    background-color: rgba(126, 36, 127, 0.4);
+  }
+}

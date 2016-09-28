@@ -8,6 +8,10 @@
 @import "libraries/neat/neat";
 @import "libraries/base/base";
 @import "libraries/font-awesome/scss/font-awesome";
+@import "libraries/utils/_hidpi-media-query";
+@import "libraries/animate.css/animate";
+
+@import "mixins/mixins";
 
 @import "global_variables";
 @import "utils/utils";
@@ -15,10 +19,11 @@
 @import "styles/colors";
 @import "styles/typography";
 
-@import "scaffold/global";
-@import "scaffold/landing-page";
+@import "scaffold/scaffold";
 
 @import "./components/components";
+
+@import "./styles/charts/charts";
 
 
 
