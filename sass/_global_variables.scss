@@ -26,15 +26,15 @@ $margin-default: 1.5rem;
 // Small screens
 $bp-small-minor-0: 320px;
 $bp-small-minor-1: 480px;
-$bp-small: '601px'; // Max resolution for small breakpoint
+$bp-small: '768px'; // Max resolution for small breakpoint
 
 $bp-medium-minor-0: 680px;
 $bp-medium-minor-1: 750px;
-$bp-medium: '801px'; // Max resolution for medium breakpoint
+$bp-medium: '1025px'; // Max resolution for medium breakpoint
 
 $bp-large-minor-0: 900px;
 $bp-large-minor-1: 960px;
-$bp-large: '1025px'; // Max resolution for large breakpoint
+$bp-large: '1200px'; // Max resolution for large breakpoint
 
 $bp-x-large-minor-0: 1200px;
 $bp-x-large-minor-1: 1300px;
@@ -43,3 +43,9 @@ $bp-x-large: '1401px'; // Min resolution for everything else
 /* Pizazz */
 $border-radius-sm: 3px;
 $border-radius-lg: 10px;
+
+/* Transitions */
+$transition-short: 0.2s;
+$transition-medium: 0.5s;
+$transition-long: 1s;
+$transition-x-long: 2s;

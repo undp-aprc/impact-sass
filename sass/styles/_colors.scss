@@ -1,5 +1,6 @@
 body {
   background-color: get-color('grey',0);
+  @include texture(0, get-color('grey',0), get-color('grey',0), 48, 0);
 }
 
 /* Headings */

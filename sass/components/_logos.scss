@@ -1,26 +1,19 @@
 .logos {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-
-  .container {
-    padding:0;
-    ul {
-      display:flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      li {
-        margin-right: 1em;
-      }
-    }
-  }
-
+  justify-content: center;
+  margin-top: 4em;
+  width:100%;
+  height:200px;
   img {
-
+    max-height: 100%;
+    flex:0;
   }
-
-  &.inactive {
-    width:300px;
+  img:nth-child(1) {
+    margin-right: 0.5em;
+  }
+  img:nth-child(2) {
+    margin-left: 0.5em;
   }
 }
 

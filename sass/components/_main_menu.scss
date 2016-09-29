@@ -1,0 +1,37 @@
+.main-menu {
+  padding:1em;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0.2);
+  transition: all $transition-short linear;
+  a {
+    color: white;
+    font-size:1em;
+    font-family: $font-headings;
+    text-transform: uppercase;
+    transition: all $transition-short linear;
+  }
+  &:hover {
+    background-color: rgba(255,255,255,0.3);
+  }
+  &.scrolled {
+    background-color: rgba(255,255,255,1);
+    top:0;
+    a {
+      color:black;
+    }
+    &:hover {
+      padding: 1.5em;
+
+    }
+  }
+  .fa {
+    color:get-color('azure',0);
+  }
+  li {
+    flex:1;
+    text-align: center;
+  }
+}

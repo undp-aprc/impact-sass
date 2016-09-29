@@ -1,4 +1,16 @@
-@import "global";
-@import "landing-page";
-@import "grid";
-@import "gender";
+@import "small";
+@import "medium";
+@import "large";
+
+article {
+  padding:1em 0;
+}
+
+footer {
+  height:50vh;
+  @include texture(0, #333, #555, 48, 1);
+}
+
+.section {
+  height:100vh;
+}

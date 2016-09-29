@@ -1,0 +1,24 @@
+#goToTop {
+  position:fixed;
+  bottom:0;
+  right:0;
+  margin:1em;
+  width:2em;
+  height:2em;
+  font-size: 2em;
+  opacity: 0;
+  transition: all $transition-short linear;
+  .fa {
+    padding:0.5em 0;
+    text-align: center;
+    display:block;
+    background-color: get-color('orange',1);
+    border-radius: 3px;
+  }
+  &.scrolled {
+    opacity: 0.3
+  }
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,9 @@
+@import '../mixins/mixins';
+
+.landing-page .hero {
+  @include hero('hero');
+}
+
+.page.signature-programme.sp-1 .hero {
+  @include hero('sp-1-hero')
+}
