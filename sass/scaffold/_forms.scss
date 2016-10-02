@@ -8,8 +8,9 @@ input[type=text], input[type=submit] {
 }
 
 input.submit {
-  background-color: get-color('green',2);
+  background-color: get-color('azure',2);
   &:hover {
-    background-color: get-color('green',3);
+    background-color: get-color('azure',3);
+
   }
 }
