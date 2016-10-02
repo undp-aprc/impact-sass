@@ -1,0 +1,13 @@
+.card {
+  @include texture(0, #fff, #fff, 70, 0);
+  padding: 1em;
+  border-radius: $border-radius-lg;
+  border: 1px solid get-color('grey',1);
+  box-shadow: 0px 0px 10px get-color('grey',3);
+  h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+  }
+  p {
+    color: get-color('grey',2);
+  }
+}

@@ -33,6 +33,7 @@ $color-map: (
         )
 );
 
-@function get-color($series: 'grey', $level: 3) {
-  @return map-get(map-get($color-map, $series), $level);
+@function get-color($series: 'grey', $level: 3, $opacity: 1) {
+        $hex-val: map-get(map-get($color-map, $series), $level);
+        @return rgba($hex-val, $opacity);
 }

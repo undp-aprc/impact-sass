@@ -1,0 +1,15 @@
+input[type=text], input[type=submit] {
+  font-size: modular-scale(1);
+  padding:1rem;
+  border-width:1px;
+  border-style: solid;
+  border-color:get-color('grey',1);
+  line-height: modular-scale(1);
+}
+
+input.submit {
+  background-color: get-color('green',2);
+  &:hover {
+    background-color: get-color('green',3);
+  }
+}

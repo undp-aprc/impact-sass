@@ -2,17 +2,18 @@
   position:fixed;
   bottom:0;
   right:0;
-  margin:1em;
+  margin:0.5em;
   width:2em;
   height:2em;
   font-size: 2em;
   opacity: 0;
   transition: all $transition-short linear;
+  color: get-color('grey',1,0.3);
   .fa {
     padding:0.5em 0;
     text-align: center;
     display:block;
-    background-color: get-color('orange',1);
+    background-color: get-color('grey',2);
     border-radius: 3px;
   }
   &.scrolled {

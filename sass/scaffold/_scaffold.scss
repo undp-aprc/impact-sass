@@ -1,6 +1,8 @@
 @import "small";
 @import "medium";
 @import "large";
+@import "grid";
+@import "forms";
 
 article {
   padding:1em 0;
@@ -12,5 +14,12 @@ footer {
 }
 
 .section {
-  height:100vh;
+  h1 {
+    text-align: center;
+  }
+  //height:100vh;
+}
+
+.padding {
+  padding:1em;
 }
