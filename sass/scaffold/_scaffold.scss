@@ -14,10 +14,16 @@ footer {
 }
 
 .section {
-  h1 {
+  h1, p {
     text-align: center;
   }
   //height:100vh;
+}
+
+.fixed-width {
+  max-width:64em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .padding {
