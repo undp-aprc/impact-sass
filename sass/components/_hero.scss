@@ -9,13 +9,13 @@
     padding: 1em;
   }
   @include media($bp-small) {
-    height:500px;
+    height:30em;
   }
   @include media($bp-medium) {
-    height:600px;
+    height:36em;
   }
   @include media($bp-x-large) {
-    height:1000px;
+    height:60em;
   }
   width:100%;
 
