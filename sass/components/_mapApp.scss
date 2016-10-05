@@ -12,6 +12,12 @@ $map-heading-opacity: 0.8;
         @include media($bp-small) {
             height:40em;
         }
+        @include media($bp-medium) {
+            height:50em;
+        }
+        @include media($bp-large) {
+            height:60em;
+        }
     }
     .signature-programme.container {
         position:absolute;
