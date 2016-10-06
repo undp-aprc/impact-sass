@@ -5,23 +5,23 @@
     background-position: 50% 0%;
     background-repeat: no-repeat;
     width:100%;
-    height:15em;
+    height:10em;
     transition: all $transition-long linear;
     @include media($bp-small-minor-0) { //480px
       height:24em;
     }
     @include media($bp-small-minor-1) { // 640px
-      height:30em;
+      height:10em;
     }
     @include media($bp-medium-minor-0) { // 832px
-      height:40em;
+      height:10em;
     }
     @include media($bp-medium-minor-1) { // 960px
       height:15em;
 
     }
     @include media($bp-medium) { // 1024px
-      height:10em;
+      height:8em;
     }
     @include media($bp-large) { // 1200px
       height: 8em;
@@ -51,10 +51,10 @@
     }
   }
   li.slick-current {
-      .image {
-        filter: none;
-        opacity:1;
-      }
+    .image {
+      filter: none;
+      opacity:1;
+    }
   }
 }
 

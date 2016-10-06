@@ -1,0 +1,45 @@
+.flip-container {
+  perspective: 1000px;
+  flex:100%;
+  padding:1em;
+  height:20em;
+  @include media($bp-small-minor-1) {
+    flex:50%;
+  }
+  @include media($bp-medium) {
+    flex:33%;
+    height:40em;
+  }
+  &:hover .flip, &.active .flip {
+    transform: rotateY(180deg);
+  }
+  .flip {
+    transition: $transition-medium;
+    transform-style: preserve-3d;
+    position: relative;
+    height:100%;
+  }
+  .front {
+    background-color: get-color('orange',0);
+    z-index:2;
+    transform: rotateY(0deg);
+  }
+  .back {
+    background-color: get-color('blue',0);
+    transform: rotateY(180deg);
+  }
+  .front, .back {
+    background-size: cover;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+  }
+}
+
+#approachesList {
+  display:flex;
+  flex-flow: row wrap;
+}
