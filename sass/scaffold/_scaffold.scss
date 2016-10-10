@@ -6,7 +6,7 @@
 @import "forms";
 
 article {
-  padding:1em 0;
+
 }
 
 footer {
@@ -23,4 +23,33 @@ footer {
 
 .padding {
   padding:1em;
+}
+
+#section-2 {
+  background-color: get-color('grey',3, 0.2);
+}
+
+.gender {
+  .main-menu {
+    background-color: rgba(255,255,255,0.8);
+    transition: all 0.2s linear;
+    padding: 0.5em 0;
+
+    li {
+      width:11%;
+      .icon {
+        height:5em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+  .main-menu.scrolled {
+    p {
+      display:none;
+    }
+  }
+  .topic-header {
+    background-color: #dfedf9;
+
+  }
 }

@@ -3,7 +3,7 @@
   top:0;
   left:0;
   z-index:1000; // Must always be on top of all other elements in window
-  height:414px;
+  height:26em;
   max-height: 100vh;
   .inner {
     padding: 1em;
@@ -58,6 +58,9 @@
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-size: auto;
+    &.svg {
+      background-size: 120%;
+    }
     @include media($bp-large) {
       background-size: 150%;
     }

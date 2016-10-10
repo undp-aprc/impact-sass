@@ -34,7 +34,12 @@
     color:get-color('azure',0);
   }
   li {
-    flex:1;
     text-align: center;
+    padding:0 1em;
+    font-size: 0.5em;
+    .icon {
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }

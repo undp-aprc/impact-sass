@@ -1,5 +1,28 @@
 .content-list.carousel {
   .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .sdgs {
+      position:absolute;
+      bottom:0;
+      height: 25%;
+      display:flex;
+      opacity: 0.3;
+      transition: opacity $transition-medium linear;
+      flex-direction: row;
+
+      li {
+        padding:0;
+        img {
+          max-height: 100%;
+        }
+      }
+      &:hover {
+        opacity: 1;
+
+      }
+    }
     background-color: get-color('grey',5);
     background-size: cover;
     background-position: 50% 0%;
@@ -29,17 +52,22 @@
     @include media($bp-x-large) { // 1440px
       height: 10em;
     }
+
   }
   .caption {
-    min-height: 5em;
     background-color: white;
     @include texture(0, #fff, #fff, 70, 0);
     border-radius: 0 0 $border-radius-sm $border-radius-sm;
     text-align: center;
     font-family: $font-headings;
+    img {
+      height: 100%;
+      width:auto;
+    }
     p {
-      padding:1em 0;
+      padding:1em 0.5em;
       margin-bottom: 0;
+      font-size: 1rem;
     }
   }
   li {
@@ -58,12 +86,13 @@
   }
 }
 
+
 #storyList {
   position: relative;
   .slick-button {
     position:absolute;
     top:30%;
-    font-size: 5em;
+    font-size: 3em;
     color:rgba(255,255,255,0.8);
     z-index: 1000;
   }

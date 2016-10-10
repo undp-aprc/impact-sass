@@ -3,21 +3,24 @@
   flex:100%;
   padding:1em;
   height:20em;
+
   @include media($bp-small-minor-1) {
     flex:50%;
   }
   @include media($bp-medium) {
     flex:33%;
-    height:40em;
+    height:15em;
   }
   &:hover .flip, &.active .flip {
     transform: rotateY(180deg);
   }
   .flip {
+    perspective: 1000px;
     transition: $transition-medium;
     transform-style: preserve-3d;
     position: relative;
     height:100%;
+    text-align: center;
   }
   .front {
     background-color: get-color('orange',0);
@@ -36,6 +39,7 @@
     left: 0;
     width:100%;
     height: 100%;
+    padding:1em;
   }
 }
 
