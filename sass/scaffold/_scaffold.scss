@@ -12,6 +12,7 @@ article {
 footer {
   height:50vh;
   @include texture(0, #333, #555, 48, 1);
+  position:relative;
 }
 
 .section {

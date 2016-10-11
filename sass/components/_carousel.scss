@@ -6,22 +6,22 @@
     .sdgs {
       position:absolute;
       bottom:0;
-      height: 25%;
+      width: 100%;
       display:flex;
-      opacity: 0.3;
+      opacity: 0.1;
       transition: opacity $transition-medium linear;
       flex-direction: row;
-
+      justify-content: center;
       li {
         padding:0;
+        width:25%;
         img {
           max-height: 100%;
         }
       }
-      &:hover {
-        opacity: 1;
-
-      }
+    }
+    &:hover .sdgs {
+      opacity: 1;
     }
     background-color: get-color('grey',5);
     background-size: cover;
