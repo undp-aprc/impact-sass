@@ -1,0 +1,112 @@
+.hero {
+  position:relative;
+  top:0;
+  left:0;
+  z-index:1000; // Must always be on top of all other elements in window
+  height:26em;
+  max-height: 100vh;
+  .inner {
+    padding: 1em;
+  }
+  @include media($bp-small) {
+    height:30em;
+  }
+  @include media($bp-medium) {
+    height:36em;
+  }
+  @include media($bp-x-large) {
+    height:60em;
+  }
+  width:100%;
+
+  .theme-title {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 1000;
+    padding:1em;
+    background: get-color('orange',3,0.5);
+    color: white;
+    font-size: 1em;
+    width:100%;
+    letter-spacing: 0.4em;
+    text-align: center;
+    text-transform: uppercase;
+    //transform: rotate(270deg) translateX(100%);
+    transform-origin: top right;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  .gradient {
+    position:absolute;
+    top:0;
+    z-index:50; // Second from bottom of local stack
+
+    height:100%;
+    width:100%;
+
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0), rgba(0,0,0,0));
+  }
+  .main-menu {
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:1000;
+    min-height: 5em;
+  }
+  #header {
+    position:absolute;
+    z-index:500;
+    width:100%;
+    height:100%;
+    display: flex;
+  }
+
+  .flex-wrapper {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .bg-img {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0; // Bottom of local stack
+
+    height:100%;
+    width:100%;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-size: auto;
+    &.svg {
+      background-size: 120%;
+    }
+    @include media($bp-large) {
+      background-size: 150%;
+    }
+  }
+  .heading {
+    width:100%;
+    h1 {
+      font-size: modular-scale(1);
+    }
+    h2 {
+      font-size: modular-scale(3);
+    }
+    @include media($bp-small-minor-1) {
+      h1 {
+        font-size: modular-scale(3);
+      }
+      h2 {
+        font-size: modular-scale(5);
+      }
+    }
+  }
+  h1, h2 {
+    color: white;
+    text-align: center;
+  }
+}

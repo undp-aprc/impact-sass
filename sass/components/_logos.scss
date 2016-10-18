@@ -1,14 +1,7 @@
 .logos {
-  width:50%;
+  width:100%;
   margin: 0 auto;
-  height:70px;
-  margin-top: 1em;
-  @include media($bp-small-minor-1) {
-    height:150px;
-  }
-  @include media($bp-large) {
-    height:250px;
-  }
+  height:4.5em;
   ul {
     height:100%;
     text-align: center;
@@ -16,12 +9,6 @@
       display: inline-block;
       height: 100%;
       padding: 0.5em;
-      @include media($bp-small-minor-1) {
-        width: 150px;
-      }
-      @include media($bp-large) {
-        width: 250px;
-      }
     }
   }
   img {

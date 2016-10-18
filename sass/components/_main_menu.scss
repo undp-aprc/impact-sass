@@ -1,46 +1,102 @@
-.main-menu {
-  padding:1em;
-  box-sizing: border-box;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: rgba(255,255,255,0.2);
-  transition: all $transition-short linear;
-  transform: translate3d(0,0,0);
-  a {
+$menu-bp : $bp-small;
+
+.menu-wrapper {
+  .menu-toggle {
+    position: fixed;
+    z-index: 2000;
     color: white;
-    font-size:1em;
-    font-family: $font-headings;
-    text-transform: uppercase;
-    transition: all $transition-short linear;
-  }
-  &:hover {
-    background-color: rgba(255,255,255,0.3);
-  }
-  &.scrolled {
-    background-color: rgba(255,255,255,1);
-    top:0;
-    a {
-      color:black;
+    line-height: $base-line-height * 2 / ((strip-unit(modular-scale(2)*$base-font-size))) + em;
+    font-size: modular-scale(2);
+    padding-left: 1em;
+    &.active {
+      color:get-color('grey',5);
     }
-    &:hover {
-      padding: 1em;
-      @include media($bp-small) {
-        padding: 1.5em;
+  }
+  .main-menu-bar {
+    background-color: rgba(255,255,255,1);
+    width:100% !important;
+    z-index: 1000;
+    transition: all $transition-short linear;
+    transform: translate3d(0,0,0);
+    opacity:0;
+    padding-bottom: 0.5em;
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+      letter-spacing: 0.4em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      color: get-color('grey',1,1);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      margin-bottom: 0em;
+    }
+    .items {
+      height:0em;
+      overflow: hidden;
+      width:100%;
+      background-color: get-color('azure',3,0.95);
+      justify-content: center;
+      padding:1em 0;
+      font-size: inherit;
+      padding:0 1em;
+      transition:height $transition-medium ease-out;
+      li {
+        margin-top: 1em;
+      }
+      a {
+        font-family: $font-headings;
+        color: white;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      // Override styles for non-mobile menu display
+      @include media($menu-bp) {
+        height:auto;
+        display: flex;
+        background-color: rgba(255,255,255,1);
+        margin-top: 0;
+        padding:0.5em 0;
+        li {
+          margin-top: 0;
+          margin-left:2em;
+          margin-right:2em;
+        }
+        a {
+          color: black;
+        }
       }
     }
+
+    &.scrolled, &.active {
+      opacity: 1;
+      font-size: 100%;
+    }
   }
-  .fa {
-    color:get-color('azure',0);
+  .menu-panel {
+    background-color: rgba(255,255,255,0.95);
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 5000;
+    transition: all $transition-medium linear;
+    overflow: hidden;
+    &.active {
+
+      height:100vh;
+    }
   }
-  li {
-    text-align: center;
-    padding:0 1em;
-    font-size: 0.5em;
-    width:20%;
-    .icon {
-      background-repeat: no-repeat;
-      background-position: center;
+}
+
+.topic-page { // Allow different heading background colours for thematic sections
+  .main-menu-bar {
+    opacity: 1;
+    background-color: get-color('orange',3,0.5);
+    &.scrolled {
+      background-color: get-color('orange',3,1);
     }
   }
 }

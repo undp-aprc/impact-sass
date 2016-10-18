@@ -1,0 +1,139 @@
+.topic-page {
+  .menu-title {
+    background-color: get-color('orange',3,0.5);
+    transition: all $transition-short linear;
+
+    &.scrolled {
+      background: get-color('orange',3,1);
+    }
+  }
+}
+
+.topic-header {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  h1, h2, h3, h4, h5, h6, p {
+    color:white;
+    text-align: center;
+  }
+  p {
+    font-size: modular-scale(3);
+  }
+  background-color: get-color('blue',3,1);
+  padding:1em;
+}
+
+.topic-navigation {
+  background-color: get-color('azure',1);
+  ul {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  li {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding:1em;
+    background-image: url('/assets/images/ui/arrow-up-inactive.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 120%;
+    &.active {
+      background-image: url('/assets/images/ui/arrow-up.svg');
+
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    p {
+      text-align: center;
+      font-size: 0.5em;
+      font-family: $font-headings;
+    }
+    img {
+      height: 3em;
+    }
+  }
+}
+
+#topicContent {
+  .swiper-wrapper.pinned {
+  }
+}
+
+.lessons-learnt {
+  li {
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+    p, img {
+      align-self: center;
+      margin: 0;
+    }
+    p {
+      padding-right: 1em;
+      flex:4;
+      color: get-color('grey',5,1);
+    }
+    img {
+      flex:1;
+    }
+  }
+  .align-right {
+    flex-direction: row-reverse;
+    p {
+      padding-right: 0;
+      padding-left: 1em;
+    }
+  }
+}
+
+.highlight-text {
+  text-align: center;
+}
+
+.swiper-container-sub-01 {
+  .swiper-slide {
+    width:25%;
+    height:10em;
+    background: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding:0;
+    filter:grayscale(100%);
+    transition: filter $transition-medium linear;
+    &.swiper-slide-active {
+      filter: grayscale(0%);
+    }
+    .label {
+      text-align: center;
+      font-family: $font-headings;
+      background-color: rgba(255,255,255,0.8);
+      padding: 0.5em;
+    }
+  }
+}
+
+.dynamic-content-container {
+  padding:1em;
+  .flex-wrapper {
+    display: flex;
+  }
+  .highlight-text {
+    flex:3;
+    padding-right:1em;
+    font-style: italic;
+    color: get-color('blue',1,1);
+  }
+  .main-text {
+    flex:9;
+  }
+}

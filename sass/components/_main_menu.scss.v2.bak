@@ -1,0 +1,62 @@
+
+
+.main-menu {
+  background-color: rgba(255,255,255,1);
+  width:100% !important;
+  z-index: 1000;
+  transition: all $transition-short linear;
+  transform: translate3d(0,0,0);
+  opacity:0;
+  .items {
+    height:0em;
+    overflow: hidden;
+    width:100%;
+    background-color: get-color('azure',3,0.95);
+    justify-content: center;
+    padding:1em 0;
+    font-size: inherit;
+    padding:0 1em;
+    transition:height $transition-medium ease-out;
+      li {
+        margin-top: 1em;
+      }
+      a {
+        font-family: $font-headings;
+        color: white;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    // Override styles for non-mobile menu display
+    @include media($menu-bp) {
+      height:auto;
+      display: flex;
+      background-color: rgba(255,255,255,1);
+      margin-top: 0;
+      padding:0.5em 0;
+      li {
+        margin-top: 0;
+        margin-left:2em;
+        margin-right:2em;
+      }
+      a {
+        color: black;
+      }
+    }
+  }
+  &.active .items {
+    //height:100vh;
+  }
+  &.scrolled, &.active {
+    opacity: 1;
+  }
+}
+
+.topic-page {
+  .main-menu {
+    p {
+      font-size: 0.5em;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+
+.parallax {
+  perspective: 1px;
+  height:100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position:absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:100vh 0;
+  background-image: url('/assets/images/themes/gender/icons/topic-01.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  h1 {
+    text-align: center;
+  }
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+  background-size: 100%;
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+  background-size: 50%;
+}
