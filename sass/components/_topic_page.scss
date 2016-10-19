@@ -18,14 +18,18 @@
     text-align: center;
   }
   p {
+    margin-top: 1em;
     font-size: modular-scale(3);
+    padding: 0 1em;
   }
   background-color: get-color('blue',3,1);
-  padding:1em;
+  background-image: url('/assets/images/ui/seigaiha.png');
+  background-attachment: fixed;
 }
 
 .topic-navigation {
-  background-color: get-color('azure',1);
+
+  position: relative;
   ul {
     display:flex;
     flex-direction: row;
@@ -35,15 +39,15 @@
   li {
     flex-grow: 1;
     flex-basis: 0;
-    padding:1em;
     background-image: url('/assets/images/ui/arrow-up-inactive.svg');
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 120%;
-    &.active {
-      background-image: url('/assets/images/ui/arrow-up.svg');
-
-    }
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    background-color: get-color('azure',1);
+    padding:1em 0;
     a {
       display: flex;
       flex-direction: column;
@@ -56,6 +60,18 @@
     }
     img {
       height: 3em;
+    }
+    &.active a::after {
+      display: block;
+      background-image: url('/assets/images/ui/arrow-up.svg');
+      background-repeat: no-repeat;
+      background-size: 200%;
+      background-position: top center;
+      position: absolute;
+      bottom:-99px;
+      content:'';
+      width:100%;
+      height:100px;
     }
   }
 }
@@ -96,6 +112,22 @@
   text-align: center;
 }
 
+.swiper-container {
+  .swiper-button {
+    position: absolute;
+    top:20%;
+    font-size: 3em;
+    color: white;
+    z-index:1000;
+  }
+  .button-next {
+    right:1rem;
+  }
+  .button-prev {
+    left:1rem;
+  }
+}
+
 .swiper-container-sub-01 {
   .swiper-slide {
     width:25%;
@@ -123,17 +155,29 @@
 }
 
 .dynamic-content-container {
-  padding:1em;
   .flex-wrapper {
-    display: flex;
+    display: block;
+    @include media($bp-small-minor-1) {
+      display: flex;
+    }
   }
-  .highlight-text {
+  .side {
+    display: none;
+    @include media($bp-small-minor-1) {
+      display: block;
+    }
     flex:3;
     padding-right:1em;
-    font-style: italic;
-    color: get-color('blue',1,1);
+    padding-top: 2.25em;
+    p {
+      font-style: italic;
+      color: get-color('blue',1,1);
+    }
   }
-  .main-text {
+  .main {
     flex:9;
+    h1, h2, h3, h4, h5, h6 {
+      text-align: left;
+    }
   }
 }

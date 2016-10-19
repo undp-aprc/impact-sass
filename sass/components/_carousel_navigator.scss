@@ -1,0 +1,13 @@
+.carousel-navigator {
+  background-color: rgba(255,255,255,0.5);
+  padding: 1em;
+  h5 {
+    background-color:get-color('azure',1,0.8);
+    padding:0.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  .swiper-container {
+    margin-bottom: 1em;
+  }
+}

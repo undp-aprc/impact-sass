@@ -9,6 +9,7 @@
   opacity: 0;
   transition: all $transition-short linear;
   color: get-color('grey',1,0.3);
+  z-index: 5000;
   .fa {
     padding:0.5em 0;
     text-align: center;
