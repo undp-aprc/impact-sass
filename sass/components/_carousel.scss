@@ -2,7 +2,18 @@
   .image {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    .view-content {
+      position:absolute;
+      top:0;
+      right:0;
+      font-size: 2em;
+      color: rgba(255,255,255,0.5);
+      line-height: 0;
+      padding: 0 0.2rem;
+      transition: all $transition-short linear;
+    }
     .sdgs {
       position:absolute;
       bottom:0;
@@ -15,6 +26,7 @@
       li {
         padding:0;
         width:25%;
+
         img {
           max-height: 100%;
         }
@@ -22,6 +34,11 @@
     }
     &:hover .sdgs {
       opacity: 1;
+    }
+    &:hover .view-content {
+      font-size: 2.2em;
+      color: rgba(255,255,255,0.8);
+
     }
     background-color: get-color('grey',5);
     background-size: cover;
