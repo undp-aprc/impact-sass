@@ -1,0 +1,62 @@
+#impact-stories {
+  .swiper-slide {
+    height:20em;
+    @include media ($bp-small-minor-1) {
+      height:10em;
+    }
+  }
+  .dynamic-content-container .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include media($bp-small-minor-1) {
+      flex-direction: row;
+    }
+    p {
+      text-align: left;
+    }
+    .side {
+      padding: 0.5em;
+      background-color: get-color('grey',1,0.5);
+      order:2;
+      display: flex;
+      flex-direction: column;
+      .sdg-tiles.flex-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 1em;
+        li {
+          flex:50%;
+          flex-grow: 0;
+        }
+      }
+      h6 {
+        font-size: 0.5em;
+        color:get-color();
+        font-style: normal;
+        margin-bottom: 1em;
+      }
+    }
+    .main {
+      order:1
+    }
+    p.learn-more {
+      font-family: $font-headings;
+      background-color: get-color('grey', 2, 0.5);
+      padding: 0.5em;
+      border-radius: $border-radius-sm;
+      text-transform: uppercase;
+      font-style: normal;
+      text-align: center;
+      margin-bottom: 0;
+      a {
+        display: inline-block;
+        color: get-color('grey', 3, 1);
+        text-align: center;
+        .fa {
+          color: get-color('grey',2,1);
+        }
+      }
+    }
+  }
+}
