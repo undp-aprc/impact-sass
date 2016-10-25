@@ -1,6 +1,92 @@
 $menu-bp : $bp-small;
 
 .menu-wrapper {
+  position:absolute ;
+  z-index:1000;
+  width: 100%;
+  .menu-toggle {
+    position: fixed;
+    color:white;
+    line-height: $base-line-height * 2 / ((strip-unit(modular-scale(2)*$base-font-size))) + em;
+    font-size: modular-scale(2);
+    padding-left: 1rem;
+    z-index: 2000;
+
+  }
+  .main-menu-bar {
+    background-color: white;
+    height:3em;
+    width:100%;
+    padding-bottom:0.5em;
+    transform: translate3d(0,0,0);
+    transition: all $transition-short linear;
+    opacity:0;
+    z-index: 1000;
+    position: relative;
+  }
+  .items {
+    width: 100%;
+    height: 0;
+    background-color: get-color('azure',3,0.9);
+    transition: all $transition-short ease-out;
+    margin-top:3em;
+    position: absolute;
+    z-index: 500;
+    overflow: hidden;
+    padding-left: 1em;
+    li {
+      margin-top: 1em;
+    }
+    li a {
+      font-family: $font-headings;
+      color: white;
+    }
+  }
+
+  &.active, &.scrolled {
+    .menu-toggle {
+      color:get-color('grey',5);
+    }
+    .main-menu-bar {
+      opacity:1;
+    }
+  }
+
+  &.active {
+    .items {
+      height:100vh;
+    }
+  }
+}
+
+.topic-page { // Allow different heading background colours for thematic sections
+  .main-menu-bar {
+    opacity: 1;
+    background-color: get-color('orange',3,0.5);
+    text-align: center;
+    height:5em;
+    &.scrolled {
+      background-color: get-color('orange',3,1);
+
+    }
+  }
+  .menu-panel {
+    background-color: rgba(255,255,255,0.95);
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 5000;
+    transition: all $transition-medium linear;
+    overflow: hidden;
+    &.active {
+
+      height:100vh;
+    }
+  }
+
+}
+
+/*.menu-wrapper {
   .menu-toggle {
     position: fixed;
     z-index: 2000;
@@ -8,7 +94,7 @@ $menu-bp : $bp-small;
     line-height: $base-line-height * 2 / ((strip-unit(modular-scale(2)*$base-font-size))) + em;
     font-size: modular-scale(2);
     padding-left: 1em;
-    &.active {
+    &.active, &.scrolled {
       color:get-color('grey',5);
     }
   }
@@ -16,10 +102,12 @@ $menu-bp : $bp-small;
     background-color: rgba(255,255,255,1);
     width:100% !important;
     z-index: 1000;
-    transition: all $transition-short linear;
-    transform: translate3d(0,0,0);
+
+
     opacity:0;
     padding-bottom: 0.5em;
+    height:3em;
+    position: relative;
     h1, h2, h3, h4, h5, h6 {
       color: white;
       letter-spacing: 0.4em;
@@ -76,27 +164,6 @@ $menu-bp : $bp-small;
       font-size: 100%;
     }
   }
-  .menu-panel {
-    background-color: rgba(255,255,255,0.95);
-    height: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 5000;
-    transition: all $transition-medium linear;
-    overflow: hidden;
-    &.active {
-
-      height:100vh;
-    }
-  }
 }
 
-.topic-page { // Allow different heading background colours for thematic sections
-  .main-menu-bar {
-    opacity: 1;
-    background-color: get-color('orange',3,0.5);
-    &.scrolled {
-      background-color: get-color('orange',3,1);
-    }
-  }
-}
+*/

@@ -124,3 +124,27 @@ $map-heading-opacity: 0.8;
     background: #3074a4;
 }
 
+.app-container.map-app {
+    .dynamic-content-container {
+        display: block;
+
+        .container {
+            padding:1em;
+            flex-direction: row;
+            &.graphs {
+                flex:2;
+            }
+            &.text {
+                flex:2;
+                h5, h6, p {
+                    margin-bottom: 1em;
+                    text-align: left;
+                }
+            }
+        }
+        @include media($bp-small-minor-1) {
+            display:flex;
+        }
+    }
+}
+

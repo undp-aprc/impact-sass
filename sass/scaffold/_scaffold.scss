@@ -5,17 +5,15 @@
 @import "grid";
 @import "forms";
 
-article {
-
-}
-
 footer {
-  height:50vh;
   @include texture(0, #333, #555, 48, 1);
   position:relative;
+  padding: 1em;
+  
 }
 
 .section {
+  padding-top: 1em;
   h1, p {
     text-align: center;
   }
@@ -26,6 +24,5 @@ footer {
   padding:1em;
 }
 
-#section-2 {
-  background-color: get-color('grey',3, 0.2);
-}
+
+
