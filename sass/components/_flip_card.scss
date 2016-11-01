@@ -1,14 +1,15 @@
 .flip-container {
   perspective: 1000px;
   flex:100%;
-  padding:1em;
   height:20em;
-
+  box-sizing: border-box;
+  padding: 0.5em 0.5em;
   @include media($bp-small-minor-1) {
     flex:50%;
+    flex-grow: 0;
   }
   @include media($bp-medium) {
-    flex:33%;
+    flex:1;
     height:15em;
   }
   &:hover .flip, &.active .flip {
@@ -23,6 +24,9 @@
     text-align: center;
     p {
       color: get-color('grey',4);
+    }
+    h4, p, a {
+      font-size: 1rem;
     }
   }
   .front {
@@ -56,6 +60,7 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1em;
   }
   .front, .back {
     background-size: cover;
@@ -65,11 +70,11 @@
     left: 0;
     width:100%;
     height: 100%;
-    padding:1em;
   }
 }
 
 #approachesList {
   display:flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }

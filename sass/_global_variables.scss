@@ -38,7 +38,9 @@ $bp-large: 75em; // 1200px Max resolution for large breakpoint
 
 $bp-x-large-minor-0: 80em; //1280px
 $bp-x-large-minor-1: 85em; //1360px
-$bp-x-large: 90em; // 1440px Min resolution for everything else
+$bp-x-large: 90em; // 1440px
+
+$bp-xx-large: 100em; // 1600px;
 
 /* Pizazz */
 $border-radius-sm: 3px;
