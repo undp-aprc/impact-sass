@@ -1,26 +1,15 @@
-.topic-page {
-  .menu-title {
-    background-color: get-color('orange',3,0.5);
-    transition: all $transition-short linear;
-
-    &.scrolled {
-      background: get-color('orange',3,1);
-    }
-  }
-}
-
 .topic-header {
   display:flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1em;
   h1, h2, h3, h4, h5, h6, p {
     color:white;
     text-align: center;
   }
   p {
-    margin-top: 1em;
-    font-size: modular-scale(3);
-    padding: 0 1em;
+    margin-bottom: 1em;
+    font-size: modular-scale(1);
   }
   background-color: get-color('blue',3,1);
   background-image: url('/assets/images/ui/seigaiha.png');

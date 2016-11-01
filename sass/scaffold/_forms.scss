@@ -6,6 +6,10 @@ input[type=text], input[type=submit] {
   line-height: modular-scale(1);
 }
 
+input[type=text] {
+  background-color: get-color('grey',0);
+}
+
 input.submit {
   background-color: get-color('azure',2);
   &:hover {
@@ -23,6 +27,9 @@ input.submit {
   margin-bottom: 1em;
   position: relative;
   select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
     background: transparent;
     border: none;
     height: 100%;

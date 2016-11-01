@@ -39,6 +39,10 @@ a:visited {
   color: get-color('green', 3);
 }
 
+a.ui-anchor.default {
+  color: white;
+}
+
 .container {
   background-color: get-color('grey',0);
 }

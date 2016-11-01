@@ -60,16 +60,18 @@ $menu-bp : $bp-small;
 }
 
 .topic-page { // Allow different heading background colours for thematic sections
-  .main-menu-bar {
-    opacity: 1;
-    background-color: get-color('orange',3,0.5);
-    text-align: center;
-    height:5em;
+  .menu-wrapper {
+    .main-menu-bar {
+      opacity: 1;
+      background-color: get-color('orange',3,0.5);
+      text-align: center;
+      height:5em;
+    }
     &.scrolled {
       background-color: get-color('orange',3,1);
-
     }
   }
+
   .menu-panel {
     background-color: rgba(255,255,255,0.95);
     height: 0;
