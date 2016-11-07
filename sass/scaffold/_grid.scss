@@ -42,6 +42,18 @@
   }
 }
 
+.grid-6-cols {
+  @include span-columns(12);
+  margin-bottom: 1em;
+  &.small {
+    @include media($bp-small) {
+      @include span-columns(6);
+      @include omega(2n);
+      margin-bottom: 0;
+    }
+  }
+}
+
 .grid-8-cols {
   @include span-columns(12);
   margin-bottom: 1em;

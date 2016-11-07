@@ -1,0 +1,113 @@
+$layout-bp: $bp-small-minor-1;
+
+.content-examples {
+  h4 {
+    background-color:get-color('azure',1,0.8);
+    padding:0.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  .examples-box {
+    display: flex;
+    flex-direction: column;
+    @include media($layout-bp) {
+      flex-direction: row;
+    }
+  }
+  .first {
+    .navigation-wrapper {
+      background-color: white;
+      padding: 0.5em;
+      margin-bottom: 2em;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      .help {
+        font-size: 0.5em;
+        text-align: center;
+        font-weight: bold;
+        color: get-color('grey',2,1);
+      }
+      @include media($layout-bp) {
+        flex-direction: column;
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+      .item-wrapper {
+        position: relative;
+        flex:2;
+        a {
+          position: relative;
+        }
+        &.active {
+          img {
+            filter: saturate(100%);
+          }
+          a {
+            &:after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-left: 1em solid transparent;
+              border-right: 1em solid transparent;
+              border-top: 1em solid white;
+              left: 50%;
+              @include media($layout-bp) {
+                border-top: 1em solid transparent;
+                border-bottom: 1em solid transparent;
+                border-left: 1em solid white;
+                bottom: 50%;
+                left: inherit;
+                right: -2em;
+              }
+            }
+          }
+        }
+        @include media($layout-bp) {
+          margin-bottom: 0.5em;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        a {
+          display: block;
+        }
+        img {
+          filter: saturate(0);
+          max-width: 100%;
+        }
+        .label {
+          position: absolute;
+          bottom:0;
+          padding: 0.5em 0;
+          width: 100%;
+          background-color: rgba(255,255,255,0.8);
+        }
+      }
+    }
+    flex:1;
+  }
+  .main-text {
+    .title {
+      text-align: left;
+      margin-bottom: 1em;
+    }
+    flex: 3;
+    @include media ($layout-bp) {
+      padding-left: 2em;
+    }
+  }
+  .second {
+    display: none;
+    @include media($bp-large) {
+      display: inherit;
+      flex:2;
+      font-style: italic;
+    }
+    .highlight-text {
+      color: get-color('azure',2,1);
+      padding-left: 1em;
+    }
+  }
+}

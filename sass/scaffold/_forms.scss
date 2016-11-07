@@ -1,9 +1,11 @@
 $color: get-color('grey',3,1);
 
-input[type=text], input[type=submit] {
-  font-size: modular-scale(1);
-  padding:1rem;
-  line-height: modular-scale(1);
+input[type=text], input[type=submit], input[type=email] {
+  font-size: modular-scale(1) !important;
+  padding:1rem !important;
+  line-height: modular-scale(1) !important;
+  height: auto !important;
+  width:100% !important;
 }
 
 input[type=text] {
@@ -11,9 +13,9 @@ input[type=text] {
 }
 
 input.submit {
-  background-color: get-color('azure',2);
+  background-color: get-color('azure',2) !important;
   &:hover {
-    background-color: get-color('azure',3);
+    background-color: get-color('azure',3) !important;
 
   }
 }
@@ -55,4 +57,12 @@ input.submit {
   margin-bottom: 0.5em;
   text-align: left !important;
   text-indent: 1rem;
+}
+
+input, .mc-field-group {
+  width:auto;
+}
+
+#mc_embed_signup .mc-field-group input {
+  padding:auto;
 }

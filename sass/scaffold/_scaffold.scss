@@ -9,7 +9,24 @@ footer {
   @include texture(0, #333, #555, 48, 1);
   position:relative;
   padding: 1em;
-  
+  .disclaimer {
+    p {
+      font-size: 0.5em;
+      text-align: left;
+      color: get-color('grey',2) !important;
+    }
+    h6 {
+      margin-bottom: 0.5em;
+    }
+  }
+  a {
+    color: get-color('orange',1);
+    font-size: 0.5em;
+    &:visited {
+      color: get-color('orange',1) !important;
+    }
+  }
+
 }
 
 .section {
@@ -25,6 +42,22 @@ footer {
 
 .padding {
   padding:1em;
+}
+
+#section-1 {
+  h1 {
+    margin-bottom: 0.5em;
+  }
+  p {
+    text-align: left;
+  }
+  ul {
+    list-style: square;
+    list-style-position: inside;
+    text-indent: -2em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
 }
 
 
